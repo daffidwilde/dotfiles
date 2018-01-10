@@ -13,5 +13,3 @@ cd .dotfiles
 ```
 
 If more dotfiles are added, then edit the `install.conf.yaml` file accordingly.
-
-¯\_(ツ)_/¯
