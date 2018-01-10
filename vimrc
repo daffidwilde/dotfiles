@@ -106,7 +106,7 @@ set mouse=a
 " Lots of colours (256)
 set t_Co=256
 " vim-latex-live-preview settings
-autocmd filetype tex setl updatetime=0.5
+autocmd filetype tex setl updatetime=1
 let g:livepreview_previewer = 'open -a Preview'
 " Set default tex filetype as 'tex' rather than 'plaintext'
 let g:tex_flavor = 'tex'
