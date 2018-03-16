@@ -54,9 +54,6 @@ let g:ale_linters = {'md': ['textlint', 'text/language_check', 'proselint']}
 " Vim-LaTeX
 Plugin 'lervag/vimtex'
 
-" Vim-LaTeX live PDF preview
-Plugin 'xuhdev/vim-latex-live-preview'
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
