@@ -60,8 +60,6 @@ Bundle 'chip/vim-fat-finger'
 " Vim-LaTeX
 Plugin 'lervag/vimtex'
 
-" Vim support for python formatter black (required `pip install black`)
-Plugin 'ambv/black'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
