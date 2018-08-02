@@ -31,6 +31,9 @@ Plugin 'bling/vim-airline'
 " NERD tree: for navigating trees
 Plugin 'scrooloose/nerdtree'
 
+" ctrlp: fuzzy searching of files
+Plugin 'kien/ctrlp.vim'
+
 " Help out with quotes/parentheses in some way...
 Plugin 'tpope/vim-surround'
 
@@ -51,8 +54,14 @@ let g:ale_linters = {'jsx': ['lacheck', 'text/language_check', 'proselint']}
 let g:ale_linters = {'rst': ['rstcheck', 'text/language_check', 'proselint']}
 let g:ale_linters = {'md': ['textlint', 'text/language_check', 'proselint']}
 
+" Vim-fat-finger: common spelling mistakes
+Bundle 'chip/vim-fat-finger'
+
 " Vim-LaTeX
 Plugin 'lervag/vimtex'
+
+" Vim support for python formatter black (required `pip install black`)
+Plugin 'ambv/black'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
