@@ -101,7 +101,7 @@ set tabstop=4
 set shiftwidth=4
 " Colour schemes
 set background=dark
-colorscheme desert
+colorscheme desert 
 " Setting default row/column and width
 set colorcolumn=80
 :set textwidth=80
@@ -109,8 +109,7 @@ set colorcolumn=80
 set mouse=a
 " Lots of colours (256)
 set t_Co=256
-" vim-latex-live-preview settings
-autocmd filetype tex setl updatetime=1
-let g:livepreview_previewer = 'open -a Preview'
 " Set default tex filetype as 'tex' rather than 'plaintext'
 let g:tex_flavor = 'tex'
+" Spell check
+:set spelllang=en_gb spell
