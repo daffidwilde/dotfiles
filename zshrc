@@ -61,4 +61,4 @@ export PATH="/Users/henrywilde/anaconda3/bin:$PATH"
 
 export TERM=xterm-256color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
-alias mvim="open -a 'macvim'"
+alias vim="mvim -v"
