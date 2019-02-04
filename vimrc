@@ -50,7 +50,6 @@ Plugin 'altercation/vim-colors-solarized'
 " `pip install proselint`
 Plugin 'w0rp/ale'
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_linters = {'jsx': ['lacheck', 'text/language_check', 'proselint']}
 let g:ale_linters = {'rst': ['rstcheck', 'text/language_check', 'proselint']}
 let g:ale_linters = {'md': ['textlint', 'text/language_check', 'proselint']}
 
@@ -94,6 +93,9 @@ set ignorecase smartcase
 set pastetoggle=<F2>
 " Where am I in the file?
 set ruler
+" Exiting typos
+cabbrev W w
+cabbrev Wq wq
 " Sort out tabs and indentation
 set autoindent
 set expandtab
