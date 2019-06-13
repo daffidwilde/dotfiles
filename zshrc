@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/Users/henrywilde/anaconda3/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
@@ -51,14 +51,30 @@ ZSH_THEME="garyblessington"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, python, pip, zsh-autosuggestions)
+plugins=(git python pip zsh-autosuggestions)
 
 # User configuration
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH="/Users/henrywilde/anaconda3/bin:$PATH"
+# export PATH="/Users/henrywilde/anaconda3/bin:$PATH"  # commented out by conda initialize
 
 export TERM=xterm-256color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
 alias vim="mvim -v"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/henrywilde/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/henrywilde/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/henrywilde/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/henrywilde/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

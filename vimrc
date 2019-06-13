@@ -52,9 +52,10 @@ Plugin 'w0rp/ale'
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters = {'rst': ['rstcheck', 'text/language_check', 'proselint']}
 let g:ale_linters = {'md': ['textlint', 'text/language_check', 'proselint']}
+let g:ale_linters = {'python': ['pylint', 'flake8']}
 
 " Vim-fat-finger: common spelling mistakes
-Bundle 'chip/vim-fat-finger'
+"Bundle 'chip/vim-fat-finger'
 
 " Vim-LaTeX
 Plugin 'lervag/vimtex'
@@ -89,6 +90,8 @@ set confirm
 set incsearch
 set hlsearch
 set ignorecase smartcase
+" Use C-c to copy to clipboard
+vmap <C-c> "+y
 " Press F2 before pasting large blocks of code
 set pastetoggle=<F2>
 " Where am I in the file?
@@ -96,6 +99,7 @@ set ruler
 " Exiting typos
 cabbrev W w
 cabbrev Wq wq
+cabbrev Q q
 " Sort out tabs and indentation
 set autoindent
 set expandtab
@@ -114,4 +118,14 @@ set t_Co=256
 " Set default tex filetype as 'tex' rather than 'plaintext'
 let g:tex_flavor = 'tex'
 " Spell check
-:set spelllang=en_gb spell
+":set spelllang=en_gb spell
+augroup markdownSpell
+    autocmd!
+    autocmd FileType markdown setlocal spell
+    autocmd BufRead,BufNewFile *.md setlocal spell
+augroup END
+augroup texSpell
+    autocmd!
+    autocmd FileType tex setlocal spell
+    autocmd BufRead,BufNewFile *.tex setlocal spell
+augroup END
