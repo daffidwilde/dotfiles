@@ -86,6 +86,11 @@ set nu
 syntax on
 " Unsaved file prompt
 set confirm
+" No swp files
+set noswapfile
+" Move between tabs with C-letter
+nnoremap <C-h> :tabprevious<CR>
+nnoremap <C-l> :tabnext<CR>
 " Incremental, smarter search
 set incsearch
 set hlsearch
@@ -117,6 +122,12 @@ set mouse=a
 set t_Co=256
 " Set default tex filetype as 'tex' rather than 'plaintext'
 let g:tex_flavor = 'tex'
+" NERDTree stuff
+let NERDTreeShowHidden=1
+map <C-t> :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Spell check
 ":set spelllang=en_gb spell
 augroup markdownSpell
