@@ -122,12 +122,16 @@ set mouse=a
 set t_Co=256
 " Set default tex filetype as 'tex' rather than 'plaintext'
 let g:tex_flavor = 'tex'
+" Ctrl-P ignore settings
+set wildignore+=*/tmp/*,*/data/*,*.csv,*.so,*.swp,*.zip
+
 " NERDTree stuff
 let NERDTreeShowHidden=1
 map <C-t> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 " Spell check
 ":set spelllang=en_gb spell
 augroup markdownSpell
