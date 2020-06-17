@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=/Users/henrywilde/anaconda3/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/anaconda3/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
@@ -57,11 +57,17 @@ plugins=(git python pip zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
-# export PATH="/Users/henrywilde/anaconda3/bin:$PATH"  # commented out by conda initialize
+# Get secrets (tokens, keys, etc.)
+
+source .secrets
 
 export TERM=xterm-256color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
+
+alias julia="/Applications/Julia-1.3.app/Contents/Resources/julia/bin/julia"
 alias vim="mvim -v"
+alias letter-draft="letter-draft.sh"
+alias letter-render="letter-render.sh"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
