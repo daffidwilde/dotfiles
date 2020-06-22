@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/anaconda3/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
@@ -59,7 +59,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Get secrets (tokens, keys, etc.)
 
-source .secrets
+source ~/.dotfiles/.secrets
 
 export TERM=xterm-256color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
@@ -71,14 +71,14 @@ alias letter-render="letter-render.sh"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/henrywilde/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/henrywilde/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/henrywilde/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/henrywilde/anaconda3/bin:$PATH"
+        export PATH="/opt/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
