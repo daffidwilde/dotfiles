@@ -43,19 +43,13 @@ Plugin 'airblade/vim-gitgutter'
 " Auto-close of parentheses and such
 Plugin 'Townk/vim-autoclose'
 
-" Solarized colours
-Plugin 'altercation/vim-colors-solarized'
-
 " Linting
-" `pip install proselint`
+" `python -m pip install proselint`
 Plugin 'w0rp/ale'
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters = {'rst': ['rstcheck', 'text/language_check', 'proselint']}
 let g:ale_linters = {'md': ['textlint', 'text/language_check', 'proselint']}
 let g:ale_linters = {'python': ['pylint', 'flake8']}
-
-" Vim-fat-finger: common spelling mistakes
-"Bundle 'chip/vim-fat-finger'
 
 " Vim-LaTeX
 Plugin 'lervag/vimtex'
@@ -82,48 +76,66 @@ filetype plugin indent on    " required
 
 " Line numbers
 set nu
+
 " Syntax colouring
 syntax on
+
 " Unsaved file prompt
 set confirm
+
 " No swp files
 set noswapfile
+
 " Move between tabs with C-letter
 nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-l> :tabnext<CR>
+
 " Incremental, smarter search
 set incsearch
 set hlsearch
 set ignorecase smartcase
+
 " Use C-c to copy to clipboard
 vmap <C-c> "+y
+
 " Press F2 before pasting large blocks of code
 set pastetoggle=<F2>
+
 " Where am I in the file?
 set ruler
+
 " Exiting typos
 cabbrev W w
 cabbrev Wq wq
 cabbrev Q q
+
 " Sort out tabs and indentation
 set autoindent
 set expandtab
 set tabstop=4
 set shiftwidth=4
-" Colour schemes
-set background=dark
-colorscheme desert 
+
 " Setting default row/column and width
 set colorcolumn=80
 :set textwidth=80
+
 " Activate mouse-click
 set mouse=a
+
 " Lots of colours (256)
 set t_Co=256
+
 " Set default tex filetype as 'tex' rather than 'plaintext'
 let g:tex_flavor = 'tex'
+
 " Ctrl-P ignore settings
 set wildignore+=*/tmp/*,*/data/*,*.csv,*.so,*.swp,*.zip
+
+" Highlight current line
+set cursorline
+hi cursorline cterm=none
+highlight CursorLine ctermbg=60
+highlight CursorLineNr cterm=none ctermbg=60
 
 " NERDTree stuff
 let NERDTreeShowHidden=1
