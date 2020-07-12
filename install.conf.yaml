@@ -6,3 +6,6 @@
     ~/.gitconfig: gitconfig
     ~/.zshrc: zshrc
     ~/.bashrc: bashrc
+
+- shell:
+    - [chsh $(which zsh), Making ZSH the default shell.]
