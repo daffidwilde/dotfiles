@@ -49,7 +49,7 @@ Plugin 'w0rp/ale'
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters = {'rst': ['rstcheck', 'text/language_check', 'proselint']}
 let g:ale_linters = {'md': ['textlint', 'text/language_check', 'proselint']}
-let g:ale_linters = {'python': ['pylint', 'flake8']}
+"let g:ale_linters = {'python': ['pylint', 'flake8']}
 
 " Vim-LaTeX
 Plugin 'lervag/vimtex'
